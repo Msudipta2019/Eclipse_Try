@@ -13,9 +13,9 @@ global class AccountNamingBatch implements Database.Batchable<Sobject>,Database.
         for(account acc: scope)
         { 
             string accnm= acc.name;
-            if( !accnm.contains('_nonProd'))
+            if( !accnm.contains('_nonProd55'))
             {
-            acc.name=acc.name+ '_nonProd'+i;
+            acc.name=acc.name+ '_nonProd55'+i;
                 i=+1;
             }
         }
