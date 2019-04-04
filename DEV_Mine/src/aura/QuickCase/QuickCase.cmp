@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForRecordHome,force:appHostable,lightning:actionOverride,force:hasRecordId"> >
+    <aura:attribute name="Case" type="Case"/>
+    <aura:attribute name="recordId" type="string"/>
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:600px">
+    <lightning:recordEditForm aura:id="recordViewForm"
+                                  recordId="{!v.recordId}"
+                                  recordTypeId="{!v.Case}"
+                                  objectApiName="Case"
+                                  onsuccess="{!c.onSuccess}">
+    <lightning:messages />
+            <lightning:inputField fieldName="Origin" />
+            <lightning:inputField fieldName="Reason" />
+            <lightning:inputField fieldName="Subject" />
+            <lightning:inputField fieldName="Description" />
+            <lightning:button aura:id="submit" type="submit" label="Update Case" class="slds-m-top_medium" />
+        </lightning:recordEditForm>
+    </div>
+</aura:component>
